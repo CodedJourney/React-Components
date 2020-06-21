@@ -7,6 +7,7 @@ import React from 'react';
 // timeStamp - time that person commented
 // comment - person's comment
 
+// Functional component to display user's comment
 const CommentDetail = (props) => {
   return (
     <div className="comment">
