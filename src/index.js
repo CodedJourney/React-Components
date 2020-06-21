@@ -1,25 +1,17 @@
 // Import Files
 import React from 'react';
 import ReactDOM from 'react-dom';
-import faker from 'faker'; // Allows me to use fake data for testing components out
+import faker from 'faker'; // Allows for simulating data
+
+import CommentDetail from './CommentDetail';
+
 // Main app
 const App = () => {
   return (
     <div className="ui container comments">
-      <div className="comment">
-        <a href="/" className="avatar">
-          <img alt="avatar" src={faker.image.avatar()} />
-        </a>
-        <div className="content">
-          <a href="/" className="author">
-            Sam
-          </a>
-          <div className="metadata">
-            <span className="date">Today at 6:00PM</span>
-          </div>
-          <div className="text">Nice blog post!</div>
-        </div>
-      </div>
+      <CommentDetail author="Sam" timeStamp="Today at 4:45PM" avatar={faker.image.avatar()} comment="Nice blog!" />
+      <CommentDetail author="James" timeStamp="Today at 1:43PM" avatar={faker.image.avatar()} comment="Informational, thanks." />
+      <CommentDetail author="Sarah" timeStamp="Yesterday at 3:30PM" avatar={faker.image.avatar()} comment="Love your blogs" />
     </div>
   );
 };
